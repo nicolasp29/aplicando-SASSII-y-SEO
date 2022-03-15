@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 199, 46, 0.911);
+    
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    justify-content:space-around;
+    align-items: center;
+    height: 170px;
+    list-style: none;
+    font-size: x-large;
+    
+    
+}
+ul a{
+    text-decoration: none;
+    color: black;
+}
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 35px;
+    justify-items: start;
+    grid-template-rows:100px 45px 50px auto 45px ;
+    grid-template-areas: 
+    "h3"
+    "p1"
+    "p2"
+    "frame"
+    "p3";
+}
+.contenido h3{
+    grid-area: h3;
+    font-size: 70px;
+
+
+}
+.contenido .p1{
+    grid-area: p1;
+    font-size: xx-large;
+
+}
+.contenido .p2{
+    grid-area: p2;
+    font-size: xx-large;
+}
+.contenido .frame{
+    grid-area: frame;
+
+}
+.contenido .p3{
+    grid-area: p3;
+    font-size: xx-large;
+}
+
+footer{
+    display: grid;
+    background-color: black; 
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-template-areas:
+    "footer1 footer3"
+    "footer2 footer3" ;
+}
+.footer .footer1,
+.footer .footer2,
+.footer .footer3{
+    margin: 15px;
+    font-size: x-large;
+
+}
+.footer1{
+    grid-area: footer1;
+}
+.footer2{
+    grid-area: footer2;
+}
+.footer3{
+    grid-area: footer3;
+    align-self: center;
+}
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media screen and (max-width:500px) {
+    .contenido{
+        grid-template-rows:70px 80px 50px auto 50px ;
+
+    }
+    .contenido .h3,
+    .contenido .p1,
+    .contenido .p2,
+    .contenido .frame,
+    .contenido .p3{
+        width: 400px;
+    }
+    .contenido .h3{
+        font-size: 50px;
+    }
+    .contenido .p1,
+    .contenido .p2,
+    .contenido .p3{
+        font-size: 30px;
+    }
+    .footer .footer1,
+    .footer .footer2,
+    .footer .footer3{
+        font-size: 20px;
+    }
+
+    
+}
