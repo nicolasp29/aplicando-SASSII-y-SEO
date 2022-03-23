@@ -16,6 +16,14 @@ header a{
     font-size: xx-large;
 }
 
+header div div div a{
+    color: black;
+}
+header div div div a:hover{
+    background: rgba(0,0,0,0.2);
+    
+}
+
 .imagen1{
     display: flex;
     
