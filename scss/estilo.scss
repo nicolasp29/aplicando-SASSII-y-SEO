@@ -1,0 +1,411 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 199, 46, 0.911);
+    & a{
+        color: black;
+        font-size: xx-large;
+    }
+    & div div div a{
+        color: black;
+    }
+    & div div div a:hover{
+        background: rgba(0,0,0,0.2);
+    }
+    & .imagen1{
+        display: flex;
+        justify-content: flex-start ;
+    }
+}
+main{
+    .contenedorinicio{
+        display: grid;
+        margin: 35px;
+        align-items: center;
+        justify-items: start;
+        font-size: x-large;
+        grid-template-columns: 1fr;
+        grid-template-rows:50px 100px 100px 5px 80px auto 130px auto;
+        grid-template-areas: 
+        "titulo"
+        "contenido"
+        "lista1"
+        "contenido1"
+        "lista2"
+        "imagen2"
+        "lista3"
+        "imagen3";
+    
+        &  h1{
+            font-size: 70px;
+            grid-area: titulo;
+        }
+        & .contenidoinicio{
+            grid-area: contenido;
+            font-size: xx-large;
+        }
+        &  .lista1inicio{
+            grid-area: lista1;
+        }
+        & .contenido1inicio{
+            grid-area: contenido1;
+        }
+        & .lista2inicio{
+            grid-area: lista2;
+        }
+        &  .imagen2inicio{
+            grid-area: imagen2;
+        }
+        &  .lista3inicio{
+            grid-area: lista3;
+        }
+        & .imagen3inicio{
+            grid-area: imagen3;
+        }
+        &  ul{
+            display: grid;
+            width: 1000px;
+            margin-left: 25px;
+        }
+    }
+}
+
+
+footer{
+    display: grid;
+    background-color: black; 
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-template-areas:
+    "footer1 footer3"
+    "footer2 footer3" ;
+    & .footer1{
+        grid-area: footer1;
+        margin: 15px;
+        font-size: x-large;
+    }
+    & .footer2{
+        grid-area: footer2;
+        margin: 15px;
+        font-size: x-large;
+    }
+    & .footer3{
+        grid-area: footer3;
+        margin: 15px;
+        font-size: x-large;
+        align-self: center;
+    }
+}
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media screen and (max-width:500px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+        justify-items: center;
+        grid-template-areas: 
+        "imagen imagen"
+        "imagen imagen" ;
+        & img{
+            grid-area: imagen;
+        }
+    }
+    main{
+        .contenedorinicio{
+            display: grid;
+            width: 400px;
+            grid-template-rows: 100px 200px 100px 100px 50px auto 100px auto ; 
+        
+            &  h1 {
+                font-size: 50px;
+            }
+            &  .contenidoinicio{
+                width: 400px;
+                font-size: 30px;
+            }
+            &  .lista1inicio{
+                width: 400px;
+            }
+            &  .contenido1inicio{
+                width: 400px;
+            }
+            &  .lista2inicio{
+                width: 400px;
+            }
+            &  .lista3inicio{
+                width: 400px;
+            }
+            &  .imagen2inicio{
+                width: 300px;
+            }
+            &  .imagen3inicio{
+                width: 300px;
+            }
+        }
+    }
+    footer{
+        & .footer1{
+            font-size: 20px;
+        }
+        & .footer2{
+            font-size: 20px;
+        }
+        & .footer3{
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+main{
+    .contenidomenu{
+        display: grid;
+        margin: 35px;
+        justify-items: start;
+        grid-template-rows: 100px 70px auto 50px;
+        grid-template-areas: 
+        "h3"
+        "p"
+        "ul"
+        "p1";
+        &  h3{
+            grid-area: h3;
+            font-size:  70px;
+        }
+        &  p{
+            grid-area: p;
+            font-size: xx-large;
+        }
+        &  ul{
+            grid-area: ul;
+            font-size: xx-large;
+        }
+        &  .p1menu{
+            grid-area: p1;
+            justify-self: center;
+            align-self: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:500px){
+    main{
+        .contenidomenu{
+            grid-template-rows: 100px 150px auto 150px;
+            & h3{
+                width: 400px;
+                font-size: 50px;
+
+            }
+            & p{
+                width: 400px;
+                font-size: 30px;
+            }
+            & ul{
+                width: 400px;
+                font-size: 30px;
+                & img{
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+main{
+    .contenidoservicos{
+        display:grid;
+        height: 400px;
+        margin: 35px;
+        grid-template-rows: 100px 100px 200px;
+        grid-template-areas: 
+        "h3"
+        "p"
+        "ul";
+        & h3{
+            font-size: 70px;
+            grid-area: h3;
+        }
+        & p{
+            font-size: xx-large;
+            grid-area: p;
+        }
+        & ul{
+            font-size: xx-large;
+            grid-area: ul;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    main{
+        .contenidoservicos{
+            height: 800px;
+            grid-template-rows:70px 200px auto ;
+            & h3{
+                width: 400px;
+                font-size: 50px;
+            }
+            & p{
+                width: 400px;
+                font-size: 30px;
+            }
+            & ul{
+                width: 400px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+main{
+    .contenidosucursales{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 35px;
+        justify-items: start;
+        grid-template-rows:100px 45px 50px auto 45px ;
+        grid-template-areas: 
+        "h3"
+        "p1"
+        "p2"
+        "frame"
+        "p3";
+        & h3{
+            grid-area: h3;
+            font-size: 70px;
+        }
+        & .p1sucursales{
+            grid-area: p1;
+            font-size: xx-large;
+        
+        }
+        & .p2sucursales{
+            grid-area: p2;
+            font-size: xx-large;
+        }
+        & .framesucursales{
+            grid-area: frame;
+        }
+        & .p3sucursales{
+            grid-area: p3;
+            font-size: xx-large;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    main{
+        .contenidosucursales{
+            grid-template-rows:70px 150px 50px auto 50px ;
+            & .h3sucursales{
+                width: 400px;
+                font-size: 50px;
+            }
+            & .p1sucursales{
+                width: 400px;
+                font-size: 30px;
+            }
+            & .p2sucursales{
+                width: 400px;
+                font-size: 30px;
+            }
+            & .framesucursales{
+                width: 400px;
+            }
+            & .p3sucursales{
+                width: 400px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+main{
+    .contenedor1contactos{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 150px 800px;
+        margin: 35px;
+        justify-items: start;
+        grid-template-areas: 
+        "h3"
+        "ul"
+        "img";
+        & h3{
+            grid-area:h3;
+            font-size: 70px;
+        }
+        & img{
+            grid-area: img;
+        }
+        & ul{
+            grid-area: ul;
+            font-size: xx-large ;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    main{
+        .contenedor1contactos{
+            grid-template-rows: 100px 250px auto;
+            & h3{
+                width: 400px;
+                font-size: 50px;
+            }
+            & ul{
+                width: 350px;
+                font-size: 30px;
+                & li{
+                    width: 350px;
+                }
+            }
+            & img{
+                width: 400px;
+            }
+        }
+    }
+}
+    
