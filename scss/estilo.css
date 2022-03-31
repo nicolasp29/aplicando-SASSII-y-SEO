@@ -18,16 +18,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 199, 46, 0.911);
-}
-
-header a {
-  color: black;
-  font-size: xx-large;
-}
-
-header div div div a {
-  color: black;
+  background-color: header a;
+  background-color-font-size: xx-large;
 }
 
 header div div div a:hover {
@@ -56,7 +48,14 @@ main .contenedorinicio {
       grid-template-columns: 1fr;
   -ms-grid-rows: 50px 100px 100px 5px 80px auto 130px auto;
       grid-template-rows: 50px 100px 100px 5px 80px auto 130px auto;
-      grid-template-areas: "titulo" "contenido" "lista1" "contenido1" "lista2" "imagen2" "lista3" "imagen3";
+      grid-template-areas: "titulo"
+ "contenido"
+ "lista1"
+ "contenido1"
+ "lista2"
+ "imagen2"
+ "lista3"
+ "imagen3";
 }
 
 main .contenedorinicio h1 {
@@ -119,15 +118,14 @@ main .contenedorinicio ul {
 footer {
   display: -ms-grid;
   display: grid;
-  background-color: black;
-  color: aliceblue;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   justify-items: center;
-      grid-template-areas: "footer1 footer3" "footer2 footer3";
+      grid-template-areas: "footer1 footer3"
+ "footer2 footer3";
 }
 
 footer .footer1 {
@@ -171,7 +169,8 @@ html {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     justify-items: center;
-        grid-template-areas: "imagen imagen" "imagen imagen";
+        grid-template-areas: "imagen imagen"
+ "imagen imagen";
   }
   header img {
     -ms-grid-row: 1;
@@ -230,7 +229,10 @@ main .contenidomenu {
   justify-items: start;
   -ms-grid-rows: 100px 70px auto 50px;
       grid-template-rows: 100px 70px auto 50px;
-      grid-template-areas: "h3" "p" "ul" "p1";
+      grid-template-areas: "h3"
+ "p"
+ "ul"
+ "p1";
 }
 
 main .contenidomenu h3 {
@@ -294,7 +296,9 @@ main .contenidoservicos {
   margin: 35px;
   -ms-grid-rows: 100px 100px 200px;
       grid-template-rows: 100px 100px 200px;
-      grid-template-areas: "h3" "p" "ul";
+      grid-template-areas: "h3"
+ "p"
+ "ul";
 }
 
 main .contenidoservicos h3 {
@@ -347,7 +351,11 @@ main .contenidosucursales {
   justify-items: start;
   -ms-grid-rows: 100px 45px 50px auto 45px;
       grid-template-rows: 100px 45px 50px auto 45px;
-      grid-template-areas: "h3" "p1" "p2" "frame" "p3";
+      grid-template-areas: "h3"
+ "p1"
+ "p2"
+ "frame"
+ "p3";
 }
 
 main .contenidosucursales h3 {
@@ -420,7 +428,9 @@ main .contenedor1contactos {
       grid-template-rows: 150px 150px 800px;
   margin: 35px;
   justify-items: start;
-      grid-template-areas: "h3" "ul" "img";
+      grid-template-areas: "h3"
+ "ul"
+ "img";
 }
 
 main .contenedor1contactos h3 {

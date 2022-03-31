@@ -1,20 +1,60 @@
+@mixin grid{
+    display: grid;
+    margin: 35px;
+    .contenedorinicio{
+        grid-template-columns: 1fr;
+        grid-template-rows:50px 100px 100px 5px 80px auto 130px auto;
+    }
+    .contenidomenu{
+        grid-template-rows: 100px 70px auto 50px;
+    }
+    .contenidoservicos{
+        grid-template-rows: 100px 100px 200px;
+    }
+    .contenidosucursales{
+        grid-template-rows:100px 45px 50px auto 45px ;
+    }
+    .contenedor1contactos{
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 150px 800px;
+    }
+
+
+    
+}
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+$color:(
+    hr:rgba(255, 199, 46, 0.911)
+    ha:black
+    ftb:black
+    ftc:white
+);
+$hr:map-get($color, hr);
+$ha:map-get($color, ha);
+$ftb:map-get($color, ftb);
+$ftc:map-get($color, ftc);
+.letra{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+}
+
+
 header{
     display: flex;
     flex-direction: row;  
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(255, 199, 46, 0.911);
+    background-color: $hr;
     & a{
-        color: black;
+        color: $ha;
         font-size: xx-large;
     }
     & div div div a{
-        color: black;
+        color: $ha;
     }
     & div div div a:hover{
         background: rgba(0,0,0,0.2);
@@ -26,13 +66,9 @@ header{
 }
 main{
     .contenedorinicio{
-        display: grid;
-        margin: 35px;
         align-items: center;
         justify-items: start;
         font-size: x-large;
-        grid-template-columns: 1fr;
-        grid-template-rows:50px 100px 100px 5px 80px auto 130px auto;
         grid-template-areas: 
         "titulo"
         "contenido"
@@ -53,18 +89,21 @@ main{
         }
         &  .lista1inicio{
             grid-area: lista1;
+            @extend .letra;
         }
         & .contenido1inicio{
             grid-area: contenido1;
         }
         & .lista2inicio{
             grid-area: lista2;
+            @extend .letra;
         }
         &  .imagen2inicio{
             grid-area: imagen2;
         }
         &  .lista3inicio{
             grid-area: lista3;
+            @extend .letra;
         }
         & .imagen3inicio{
             grid-area: imagen3;
@@ -73,6 +112,7 @@ main{
             display: grid;
             width: 1000px;
             margin-left: 25px;
+            @extend .letra;
         }
     }
 }
@@ -80,8 +120,8 @@ main{
 
 footer{
     display: grid;
-    background-color: black; 
-    color: aliceblue;
+    background-color: $ftb;
+    color: $ftc;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -179,10 +219,7 @@ html{
 
 main{
     .contenidomenu{
-        display: grid;
-        margin: 35px;
         justify-items: start;
-        grid-template-rows: 100px 70px auto 50px;
         grid-template-areas: 
         "h3"
         "p"
@@ -198,7 +235,7 @@ main{
         }
         &  ul{
             grid-area: ul;
-            font-size: xx-large;
+            @extend .letra;
         }
         &  .p1menu{
             grid-area: p1;
@@ -240,10 +277,7 @@ main{
 
 main{
     .contenidoservicos{
-        display:grid;
         height: 400px;
-        margin: 35px;
-        grid-template-rows: 100px 100px 200px;
         grid-template-areas: 
         "h3"
         "p"
@@ -258,7 +292,7 @@ main{
         }
         & ul{
             font-size: xx-large;
-            grid-area: ul;
+            @extend .letra;
         }
     }
 }
@@ -292,11 +326,8 @@ main{
 
 main{
     .contenidosucursales{
-        display: grid;
         grid-template-columns: 1fr;
-        margin: 35px;
         justify-items: start;
-        grid-template-rows:100px 45px 50px auto 45px ;
         grid-template-areas: 
         "h3"
         "p1"
@@ -364,10 +395,6 @@ main{
 main{
     .contenedor1contactos{
         width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 150px 150px 800px;
-        margin: 35px;
         justify-items: start;
         grid-template-areas: 
         "h3"
@@ -382,7 +409,7 @@ main{
         }
         & ul{
             grid-area: ul;
-            font-size: xx-large ;
+            @extend .letra;
         }
     }
 }
